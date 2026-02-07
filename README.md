@@ -20,6 +20,28 @@ WAV recording is trivial
 
 Can record minutes or hours, not just 20 seconds
 
+Teensy:
+
+Has huge RAM
+
+Can write to SD without audio dropouts
+
+Supports:
+
+44.1 kHz
+
+16-bit
+
+Long recordings
+
+Works beautifully with:
+
+Audio Library
+
+I2S microphones
+
+Analog mics
+
 ### ISD1820 Sound/Voice recording/playback
 
 Record short audio files and play. 
