@@ -63,9 +63,9 @@ Read more about the audio shield [here](https://www.pjrc.com/store/teensy3_audio
 -----------
 ### WIRING
 
-Insert the micro-SD card into the Teensy 4.1
-
 Mount your Teensy Audio Shield on top of the Teensy 4.1
+
+Insert the micro-SD card into the Teensy Audio Shield
 
 Wire as follows:
     
@@ -81,7 +81,8 @@ BUTTONS
 
 
 -----------
-### CODE AND INSTRUCTIONS
+### CODE : REC EXAMPLE
+
 
 Let's test Teensy by running one of the many Teensy Audio Library ready‑made examples:
 
@@ -91,8 +92,28 @@ Let's test Teensy by running one of the many Teensy Audio Library ready‑made e
 
 - This sketch will record audio from the electret microphone and save it as a .RAW file to the SD card, and play it back (mono).
 
+- Scroll down the scket and uncommend the following line of code:
 
+    `const int myInput = AUDIO_INPUT_MIC;`
 
+- Upload the code to your Teensy board.
+
+- Use the buttons to rec, play and stop.
+
+-----------
+### CODE : ADD LED and POT
+
+| Component                | Teensy Pin | Notes / Connection                                                                                               |
+| ------------------------ | ---------- | ---------------------------------------------------------------------------------------------------------------- |
+| **Recording LED**        | Pin **13** | Connect LED + resistor to 3.3 V pin through a 220 Ω resistor or connect cathode to GND depending on wiring style |
+| **Volume potentiometer** | A0         | Connect middle pin to A0, one side to 3.3 V, the other to GND. The Teensy reads it and sets output volume.       |
+
+Download code [here]
+
+-----------
+### CODE : CONVERT TO WAV
+
+Download code [here]
 
 -----------
 ### Further development
