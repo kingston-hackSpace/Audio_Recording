@@ -66,20 +66,32 @@ Mount your Teensy Audio Shield on top of the Teensy 4.1
 
 Wire as follows:
 
-| Component                      | Teensy 4.1 Pin                         | Notes / Connection                                           |
-| ------------------------------ | -------------------------------------- | ------------------------------------------------------------ |
-| **SPH0645LM4H I2S Microphone** | **BCLK** → Pin 21                      | I2S Bit Clock                                                |
-|                                | **LRCLK** → Pin 20                     | I2S Word Select / Left-Right Clock                           |
-|                                | **DOUT** → Pin 9                       | I2S Data Out (to Teensy)                                     |
-|                                | **VDD** → 3.3 V                        | Power                                                        |
-|                                | **GND** → GND                          | Ground                                                       |
-|                                |                                        |                                                              |
-|                                |                                        |                                                              |
-| **MAX98357A I2S Amplifier**    | **BCLK** → Teensy I2S BCLK (Pin 21)    | I2S Bit Clock                                                |
-|                                | **LRCLK** → Teensy I2S LRCLK (Pin 20)  | Word select                                                  |
-|                                | **DIN** → Teensy I2S Data Out          | Audio data from Teensy                                       |
-|                                | **VCC** → 3.3 V                        | Power                                                        |
-|                                | **GND** → GND                          | Ground                                                       |
+**SPH0645LM4H I2S Microphone** 
+| Mic → Teensy 4.1 Pin                   | Notes / Connection                                           |
+| -------------------------------------- | ------------------------------------------------------------ |
+| **BCLK** → Pin 21                      | I2S Bit Clock                                                |
+| **LRCLK** → Pin 20                     | I2S Word Select / Left-Right Clock                           |
+| **DOUT** → Pin 9                       | I2S Data Out (to Teensy)                                     |
+| **VDD** → 3.3 V                        | Power                                                        |
+| **GND** → GND                          | Ground                                                       |
+
+**MAX98357A I2S Amplifier** 
+| AMP → Teensy 4.1 Pin                   | Notes / Connection                                           |
+| -------------------------------------- | ------------------------------------------------------------ |
+| **BCLK** → Teensy I2S BCLK (Pin 21)    | I2S Bit Clock                                                |
+| **LRCLK** → Teensy I2S LRCLK (Pin 20)  | Word select                                                  |
+| **DIN** → Teensy I2S Data Out          | Audio data from Teensy                                       |
+| **VCC** → 3.3 V                        | Power                                                        |
+| **GND** → GND                          | Ground                                                       |
+    
+
+BUTTON
+
+| Teensy Pin → Other side of button | Function |
+| -------------------- | ----------- |
+| Pin **0**  → GND     |  **Record** |
+| Pin **1**  → GND     |  **Stop**   |
+| Pin **2**  → GND     |  **Play**   |
 
 
 
