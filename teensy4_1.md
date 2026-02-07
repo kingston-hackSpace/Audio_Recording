@@ -2,7 +2,7 @@
 
 Why teensy? 
 
-[Watch this vide](https://www.youtube.com/watch?v=75IvTqRwNsE)
+[Watch this video](https://www.youtube.com/watch?v=75IvTqRwNsE)
 
 - **600 MHz Cortex-M7 processor**: extremely fast, capable of handling real-time audio processing without glitches.
 
