@@ -1,6 +1,6 @@
 # audio_recording
 
-### Teensy 4.1 + SPH0645LM4H I2S mic
+### [Teensy 4.1](https://github.com/kingston-hackSpace/audio_recording/blob/main/teensy4_1.md)
 
 600 MHz Cortex-M7 😮
 
