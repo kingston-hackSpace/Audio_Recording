@@ -1,5 +1,18 @@
 # Teensy 4.1
 
+How audio flows:
+
+Mic converts sound → digital samples
+
+Teensy receives audio via I2S
+
+Audio Library buffers it in RAM
+
+Teensy writes chunks to built-in SD card
+
+You remove SD → play WAV on computer 🎧
+
+---
 ### HARDWARE
 
 - Teensy 4.1 
