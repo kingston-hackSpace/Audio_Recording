@@ -1,5 +1,9 @@
 # Teensy 4.1
 
+Why teensy? 
+
+[Watch this vide](https://www.youtube.com/watch?v=75IvTqRwNsE)
+
 - **600 MHz Cortex-M7 processor**: extremely fast, capable of handling real-time audio processing without glitches.
 
 - **1 MB of RAM**: Huge RAM, this large memory allows huge buffers, so audio can be streamed and written to storage without dropouts. Can record minutes or hours. 
@@ -17,24 +21,6 @@
 
 Read more [here](https://www.sparkfun.com/teensy-4-1.html)
 
-
----
-### Recording WAV with the Teensy Audio Library 
-
-It already includes:
-
-- AudioInputI2S
-
-- AudioRecordQueue
-
-- SD writing helpers
-
-- Typical flow:
-
-  ```
-  AudioInputI2S mic;
-  AudioRecordQueue recorder;
-  ```
 
 ---
 ### HARDWARE
@@ -70,6 +56,8 @@ If you are using the Teensy 4.1 for the first time, you will need to follow the 
 
 - Install the Teensyduino Library. See more [here](https://www.pjrc.com/teensy/td_download.html)
 
+- Further installation guidance [for Windows](https://www.youtube.com/watch?v=az9oHKhK7Uc)
+
 - done! Plug the Teensy 4.1 to your computer.
 
 - Select the teensy as your board.
@@ -78,6 +66,8 @@ If you are using the Teensy 4.1 for the first time, you will need to follow the 
 
 - Upload Arduino's Blink example to test communication
 
+
+More about using the Teensy for audio projects [here](https://www.youtube.com/watch?v=exhIvvogbsg&list=PLDnEejiR3mBwSYLSxqluI-c01M04JyP2c)
 
 
 
