@@ -54,7 +54,7 @@ Follow the installation steps [here](https://github.com/kingston-hackSpace/Teens
 -----------
 ### CODE AND INSTRUCTIONS
 
-Let's test our Teensy by running one of the many Teensy Audio Library ready‑made examples:
+Let's test Teensy by running one of the many Teensy Audio Library ready‑made examples:
 
 In Arduino IDE:
 
