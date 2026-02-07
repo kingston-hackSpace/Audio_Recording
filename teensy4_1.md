@@ -89,7 +89,7 @@ Let's test Teensy by running one of the many Teensy Audio Library ready‑made e
 
 - Go to File → Examples → Audio → Recorder. 
 
-- This sketch will record audio from your I2S microphone and save it as a .RAW file to the SD card, and play it back (mono).
+- This sketch will record audio from the electret microphone and save it as a .RAW file to the SD card, and play it back (mono).
 
 
 
