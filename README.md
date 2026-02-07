@@ -54,4 +54,4 @@ This is not a micro-controller
 
 ### Pico
 
-### others?
+### Arduino Nano 33
