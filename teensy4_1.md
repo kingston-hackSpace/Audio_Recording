@@ -1,26 +1,13 @@
 # Teensy 4.1
 
-Why teensy? 
+Build a audio recorder with Teensy 4.1
 
-[Watch this video](https://www.youtube.com/watch?v=75IvTqRwNsE)
+---
+### Teensy SET-UP
 
-- **600 MHz Cortex-M7 processor**: extremely fast, capable of handling real-time audio processing without glitches.
+If you are using the Teensy 4.1 for the first time, you will need to install the Teensy board and library.
 
-- **1 MB of RAM**: Huge RAM, this large memory allows huge buffers, so audio can be streamed and written to storage without dropouts. Can record minutes or hours. 
-
-- **Built-in microSD socket**: native SDIO interface is much faster than SPI, allowing continuous audio recording for minutes or hours.
-
-- **3.3 V logic**: compatible with most I2S microphones and peripherals without level-shifting.
-
-- **Supports 44.1 kHz, 16-bit audio**: enabling high-quality recordings.
-
-- Works with both I2S digital microphones and analog microphones.
-
-- **Audio Library**: Integrated support via the Teensy Audio Library makes setup and coding much simpler compared to other microcontrollers.
-
-
-Read more [here](https://www.sparkfun.com/teensy-4-1.html)
-
+Follow the installation steps [here](https://github.com/kingston-hackSpace/Teensy_4-1/blob/main/README.md)
 
 ---
 ### HARDWARE
@@ -42,34 +29,6 @@ Read more [here](https://www.sparkfun.com/teensy-4-1.html)
 - Push buttons
 
 - Potentiometer
-
------------
-### Teensy set up (for Arduino IDE)
-
-If you are using the Teensy 4.1 for the first time, you will need to follow the next set-up steps:
-
-- Open your Arduino IDE, and click File > Preferences (on MacOS, click Arduino IDE > Settings).
-
-- In "Additional boards manager URLs", copy this link: https://www.pjrc.com/teensy/package_teensy_index.json
-
-- In the main Arduino window, open Boards Manager by clicking the left-side board icon, search for "teensy", and click "Install".
-
-- Install the Teensyduino Library. See more [here](https://www.pjrc.com/teensy/td_download.html)
-
-- Further installation guidance [for Windows](https://www.youtube.com/watch?v=az9oHKhK7Uc)
-
-- done! Plug the Teensy 4.1 to your computer.
-
-- Select the teensy as your board.
-
-- If the Teensy is not turning on, you might need to press the BOOST button. Reboot the board. 
-
-- Upload Arduino's Blink example to test communication
-
-
-More about using the Teensy for audio projects [here](https://www.youtube.com/watch?v=exhIvvogbsg&list=PLDnEejiR3mBwSYLSxqluI-c01M04JyP2c)
-
-
 
 -----------
 ### WIRING
