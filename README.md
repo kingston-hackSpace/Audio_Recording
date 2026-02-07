@@ -2,45 +2,22 @@
 
 ### [Teensy 4.1](https://github.com/kingston-hackSpace/audio_recording/blob/main/teensy4_1.md)
 
-600 MHz Cortex-M7 😮
+The Teensy 4.1 is a microcontroller built for audio projects. Best option for audio recording.  
 
-1 MB RAM
+- **600 MHz Cortex-M7 processor**: extremely fast, capable of handling real-time audio processing without glitches.
 
-Built-in microSD socket (native SDIO, not SPI)
+- **1 MB of RAM**: Huge RAM, this large memory allows huge buffers, so audio can be streamed and written to storage without dropouts. Can record minutes or hours.
 
-3.3 V logic
+- **Built-in microSD socket**: native SDIO interface is much faster than SPI, allowing continuous audio recording for minutes or hours.
 
-Designed specifically for audio projects
+- **3.3 V logic**: compatible with most I2S microphones and peripherals without level-shifting.
 
-SD writes do not block audio
+- **Supports 44.1 kHz, 16-bit audio**: enabling high-quality recordings.
 
-Huge buffers → zero dropouts
+- Works with both I2S digital microphones and analog microphones.
 
-WAV recording is trivial
+- **Audio Library**: Integrated support via the Teensy Audio Library makes setup and coding much simpler compared to other microcontrollers.
 
-Can record minutes or hours, not just 20 seconds
-
-Teensy:
-
-Has huge RAM
-
-Can write to SD without audio dropouts
-
-Supports:
-
-44.1 kHz
-
-16-bit
-
-Long recordings
-
-Works beautifully with:
-
-Audio Library
-
-I2S microphones
-
-Analog mics
 
 ### ISD1820 Sound/Voice recording/playback
 
