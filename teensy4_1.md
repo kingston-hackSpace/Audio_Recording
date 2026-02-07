@@ -10,6 +10,33 @@ If you are using the Teensy 4.1 for the first time, you will need to install the
 Follow the installation steps [here](https://github.com/kingston-hackSpace/Teensy_4-1/blob/main/README.md)
 
 ---
+### SAVING .RAW FILES
+
+Teensy uses RAW audio files (instead of WAV or MP3) because RAW is:
+
+- Audio files with no compression
+
+- Fast to write 
+
+- Safe for long recordings
+
+- Impossible to corrupt mid-recording
+
+- Perfect for SD cards
+
+This is why most professional embedded audio recorders record RAW internally and convert later.
+
+In the Teensy file, the RAW file will store:
+
+- Sample rate: 44.1 kHz
+
+- Bit depth: 16-bit
+
+- Channels: mono
+
+- Format: signed PCM
+
+---
 ### HARDWARE
 
 - Teensy 4.1 
@@ -26,12 +53,18 @@ Follow the installation steps [here](https://github.com/kingston-hackSpace/Teens
 
 - 4Ω speakers or headphones
 
-- Push buttons
+- Push buttons (x3)
 
 - Potentiometer
 
 -----------
 ### WIRING
+
+Insert the micro-SD card into the Teensy 4.1
+
+Mount your Teensy Audio Shield on top of the Teensy 4.1
+
+Wire as follows:
 
 | Component                      | Teensy 4.1 Pin                         | Notes / Connection                                           |
 | ------------------------------ | -------------------------------------- | ------------------------------------------------------------ |
@@ -56,10 +89,13 @@ Follow the installation steps [here](https://github.com/kingston-hackSpace/Teens
 
 Let's test Teensy by running one of the many Teensy Audio Library ready‑made examples:
 
-In Arduino IDE:
+- Open the Arduino IDE (Windows) or Teensyduino (macOS):
 
-- File → Examples → Audio
+- Go to File → Examples → Audio → Recorder. 
 
-Select:
+- This sketch will record audio from your I2S microphone and save it as a .RAW file to the SD card, and play it back (mono).
 
-- AudioRecordToWav
+- // A much more advanced sound recording and data logging project:
+// https://github.com/WMXZ-EU/microSoundRecorder
+// https://github.com/WMXZ-EU/microSoundRecorder/wiki/Hardware-setup
+// https://forum.pjrc.com/threads/52175?p=185386&viewfull=1#post185386
