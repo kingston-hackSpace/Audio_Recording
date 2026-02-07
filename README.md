@@ -1,4 +1,4 @@
-# audio_recording
+# Audio Recording
 
 ### [Teensy 4.1](https://github.com/kingston-hackSpace/audio_recording/blob/main/teensy4_1.md)
 
