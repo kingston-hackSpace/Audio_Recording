@@ -49,14 +49,26 @@ See tutorial [here](https://www.electroniclinic.com/arduino-isd1820-voice-record
 ----
 ### Change speakers
 
+If you want higher volumen, you will need a speaker amplifier like the LM386 module.
+
+See wiring [here]
 
 ----
 ### interfase with Arduino
 
-Trigger pins sending a LOW → HIGH transition
+Wiring: Connect the ISD1820 with Arduino as follows:
+
+VCC to 5V
+GND to GND
+PE to Digital pin 3
+REC to Digital pin 2
+
+Code: Trigger pins sending a LOW → HIGH transition
 
 ----
 ### More tutorials
 
 [ISD1820 with Arduino and sensors](https://www.electroniclinic.com/arduino-isd1820-voice-recorder-playback-module/)
+
+[Play sound if IR sensor detects movement](https://www.electronicshub.org/interfacing-isd1820-voice-recorder-module-with-arduino/)
 
