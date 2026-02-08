@@ -59,14 +59,17 @@ See wiring [here](https://github.com/kingston-hackSpace/Audio_Recording/blob/mai
 ----
 ### interfase with Arduino
 
-Wiring: Connect the ISD1820 with Arduino as follows:
+**Wiring**: Connect the ISD1820 with Arduino as follows:
 
-VCC to 5V
-GND to GND
-PE to Digital pin 3
-REC to Digital pin 2
+- VCC to 5V
 
-Code: Trigger pins sending a LOW → HIGH transition
+- GND to GND
+
+- PE to Digital pin 3
+
+- REC to Digital pin 2
+
+**Code:** Trigger pins sending a LOW → HIGH transition
 
 ----
 ### More tutorials
