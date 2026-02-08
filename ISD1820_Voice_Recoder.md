@@ -16,17 +16,18 @@
 ----
 ### Module control
 
-REC : Push and start recording. Continue to push the button until you record the complete message.
+**VCC:** +5V power supply
 
-PLAYE : Plays the recorded sound. Edge-triggered. Press once to play the entire voice message. 
+**GND:** GND power supply 
 
-PLAYL : Plays the recorded sound. Level-triggered. Push and hold the PLAYL button and the message starts playing and if you want to stop the playback at any time, simply release the button.
+**FT:** Feed Through. Does not play recorded audio. Routes the microphone input directly to the speaker output. Acts like a crude live microphone. Ignores the recorded memory completely
 
-VCC : +5V power supply
+**PLAYL:** Plays the recorded sound. Level-triggered. Push and hold the PLAYL button and the message starts playing and if you want to stop the playback at any time, simply release the button.
 
-GND: GND power supply 
+**PLAYE:** Plays the recorded sound. Edge-triggered. Press once to play the entire voice message. 
 
-FT: Feed Through. Does not play recorded audio. Routes the microphone input directly to the speaker output. Acts like a crude live microphone. Ignores the recorded memory completely
+**REC:** Push and start recording. Continue to push the button until you record the complete message.
+
 
 ----
 ### Activating Endless-Loop-Playback
