@@ -41,7 +41,7 @@ Infinite looping will work like:
 - while the PLEYL button is pressed, the track will loop.
 
 ----
-### Change audio storage capacity
+### Change storage capacity
 
 Change the audio storage capacity in a range from 8 to 20 seconds.
 
@@ -50,9 +50,11 @@ See tutorial [here](https://www.electroniclinic.com/arduino-isd1820-voice-record
 ----
 ### Change speakers
 
-If you want higher volumen, you will need a speaker amplifier like the LM386 module.
+If you want higher volume, you will need a speaker amplifier like the LM386 module. This will need external power.
 
-See wiring [here]
+Check that the amplifier is suitable for your speaker, or you might damage the equipment.
+
+See wiring [here](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/addAmp.png)
 
 ----
 ### interfase with Arduino
