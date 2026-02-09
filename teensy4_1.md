@@ -10,33 +10,6 @@ If you are using the Teensy 4.1 for the first time, you will need to install the
 Follow the installation steps [here](https://github.com/kingston-hackSpace/Teensy_4-1/blob/main/README.md)
 
 ---
-### SAVING .RAW FILES
-
-Teensy uses RAW audio files (instead of WAV or MP3) because RAW is:
-
-- Audio files with no compression
-
-- Fast to write 
-
-- Safe for long recordings
-
-- Impossible to corrupt mid-recording
-
-- Perfect for SD cards
-
-This is why most professional embedded audio recorders record RAW internally and convert later.
-
-In the Teensy file, the RAW file will store:
-
-- Sample rate: 44.1 kHz
-
-- Bit depth: 16-bit
-
-- Channels: mono
-
-- Format: signed PCM
-
----
 ### HARDWARE
 
 - Teensy 4.1 
@@ -133,17 +106,14 @@ BUTTONS
 - Test by pressing the buttons to rec, play and stop.
 
 -----------
-### CODE : SAVING AUDIO AS A WAV FILE
-
------------
 ### CODE : SAVING MULTIPLE WAV FILES
 
 Download code [here]
 
 
 
-////////
-NEXT SECTION IS IN WORK IN PROGRESS...
+----------
+# NEXT SECTION IS IN WORK IN PROGRESS...
 
 -----------
 ### CODE : ADD LED and POT
@@ -156,6 +126,10 @@ NEXT SECTION IS IN WORK IN PROGRESS...
 Download code [here]
 
 
+-----------
+### Learn mmore about WAV and RAW audio format
+
+https://github.com/kingston-hackSpace/Audio_Recording/blob/main/teensy_audio-file-format.md
 
 -----------
 ### Further development
