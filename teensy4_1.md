@@ -79,10 +79,7 @@ BUTTONS
 
 
 -----------
-### CODE : REC EXAMPLE
-
-
-Let's test Teensy by running one of the many Teensy Audio Library ready‑made examples:
+### CODE : TESTING SD CARD
 
 - Open the Arduino IDE (Windows) or Teensyduino (macOS):
 
@@ -90,21 +87,54 @@ Let's test Teensy by running one of the many Teensy Audio Library ready‑made e
 
 - Upload the code to your board and open the Serial Monitor
 
-    - If you have library error messages: The teensy uses its one libraries. If you have a duplicated library, such as the SdFat, you might have a library conflict. Try removing the conflicting libraries from your Arudino/Documents/libraries
+    - If you have library error messages: The teensy uses its own libraries. If you have a duplicated library, such as the SdFat, you might have a library conflict. Try fixing the issue by removing the conflicting libraries from your Ardudino/Documents/libraries
 
-    - If you get a error message in the Serial Monitor: check that you selected the correct *chipSelect*. You cannot use 2 SD cards, you must select of the one build in your board, or the one in the audio shield.  
+    - If you get a error message in the Serial Monitor: check that you selected the correct *chipSelect*. You cannot use 2 SD cards, you must select of only one: the build-in SD ard of your board, or the one in the audio shield.
+ 
+    - A sucessfull SD result should show your the SD card info. 
+ 
+-----------
+### CODE : RECORDER EXAMPLE (1 TRACK THAT OVERWRITES)
 
 - Go to File → Examples → Audio → Recorder. 
 
 - This sketch will record audio from the electret microphone and save it as a .RAW file to the SD card, and play it back (mono).
 
-- Scroll down the scket and uncommend the following line of code:
+- Scroll down the sketch and type the right output pins. It should look like:
 
-    `const int myInput = AUDIO_INPUT_MIC;`
+  ```
+  Bounce buttonRecord = Bounce(24, 8);
+  Bounce buttonStop = Bounce(25, 8);
+  Bounce buttonPlay = Bounce(28, 8);
+  ```
 
-- Upload the code to your Teensy board.
+- Just under the previous Bounce section, you need to select the right audio input. It should look like:
 
-- Use the buttons to rec, play and stop.
+  ```
+  //const int myInput = AUDIO_INPUT_LINEIN;
+  const int myInput = AUDIO_INPUT_MIC;
+  ```
+
+- Scroll down the sketch and replace the push button pin numbers. It should look like:
+
+  ```
+  pinMode(24, INPUT_PULLUP);
+  pinMode(25, INPUT_PULLUP);
+  pinMode(26, INPUT_PULLUP);
+  ```  
+  
+- Upload the code to your Teensy board. 
+
+- Test by pressing the buttons to rec, play and stop.
+
+-----------
+### CODE : SAVING AUDIO AS A WAV FILE
+
+-----------
+### CODE : CONVERT TO WAV
+
+Download code [here]
+
 
 -----------
 ### CODE : ADD LED and POT
@@ -116,10 +146,7 @@ Let's test Teensy by running one of the many Teensy Audio Library ready‑made e
 
 Download code [here]
 
------------
-### CODE : CONVERT TO WAV
 
-Download code [here]
 
 -----------
 ### Further development
