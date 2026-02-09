@@ -63,9 +63,9 @@ Read more about the audio shield [here](https://www.pjrc.com/store/teensy3_audio
 -----------
 ### WIRING
 
-Mount your Teensy Audio Shield on top of the Teensy 4.1
-
 Insert the micro-SD card into the Teensy Audio Shield
+
+Mount your Teensy Audio Shield on top of the Teensy 4.1
 
 Wire as follows:
     
