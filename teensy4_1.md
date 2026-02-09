@@ -1,6 +1,6 @@
 # Teensy 4.1
 
-Build a audio recorder with Teensy 4.1
+Build an audio recorder with Teensy 4.1
 
 ---
 ### Teensy SET-UP
