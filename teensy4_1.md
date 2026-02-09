@@ -3,7 +3,7 @@
 Build an audio recorder with Teensy 4.1
 
 ---
-### Teensy SET-UP
+### SET-UP
 
 If you are using the Teensy 4.1 for the first time, you will need to install the Teensy board and library.
 
@@ -24,11 +24,13 @@ Follow the installation steps [here](https://github.com/kingston-hackSpace/Teens
 
 - Push buttons (x3)
 
+- LED + 220 ohms resistor
+
 
 ---
 ### TEENSY AUDIO SHIELD
 
-*note*: You do not need an external mic when you have the Audio Shield. The shield already gives you a electret mic.
+*note*: You do not need an external mic when you have the Audio Shield. The shield already provides an electret mic.
 
 Read more about the audio shield [here](https://www.pjrc.com/store/teensy3_audio.html)
 
@@ -36,20 +38,18 @@ Read more about the audio shield [here](https://www.pjrc.com/store/teensy3_audio
 -----------
 ### WIRING
 
-Insert the micro-SD card into the Teensy Audio Shield
-
-Mount your Teensy Audio Shield on top of the Teensy 4.1
+Insert the micro-SD card into the Teensy 4.1 board (not the audio shield)
 
 Wire as follows:
-    
-BUTTONS
 
-| Teensy Pin / Other side of button | Function |
+| Wiring | Function |
 | -------------------- | ----------- |
-| Pin **24**  / GND     |  **Record** |
-| Pin **25**  / GND     |  **Stop**   |
-| Pin **28**  / GND     |  **Play**   |
+| Pin **24**  / Button 1 / GND     |  **Record** |
+| Pin **25**  / Button 2 / GND     |  **Stop**   |
+| Pin **28**  / Button 3 / GND     |  **Play**   |
+| Pin **32**  / Resistor 220ohms / LED+ / LED- / GND     |  **LED REC**   |
 
+Reference image [here]
 
 -----------
 ### CODE : TESTING SD CARD
