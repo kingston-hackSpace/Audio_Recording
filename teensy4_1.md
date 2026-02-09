@@ -89,7 +89,7 @@ BUTTONS
 
     - If you have library error messages: The teensy uses its own libraries. If you have a duplicated library, such as the SdFat, you might have a library conflict. Try fixing the issue by removing the conflicting libraries from your Ardudino/Documents/libraries
 
-    - If you get a error message in the Serial Monitor: check that you selected the correct *chipSelect*. You cannot use 2 SD cards, you must select of only one: the build-in SD ard of your board, or the one in the audio shield.
+    - If you get a error message in the Serial Monitor: check that you selected the correct *chipSelect*. You cannot use 2 SD cards, you must select of only one: the built-in SD ard of your board, or the one in the audio shield.
  
     - A sucessfull SD result should show your the SD card info. 
  
@@ -114,6 +114,11 @@ BUTTONS
   //const int myInput = AUDIO_INPUT_LINEIN;
   const int myInput = AUDIO_INPUT_MIC;
   ```
+- Just under the previous mic section, you need to select the right SD card pin. It should look like:
+
+  ```
+  #define SDCARD_CS_PIN BUILTIN_SDCARD
+  ```
 
 - Scroll down the sketch and replace the push button pin numbers. It should look like:
 
@@ -131,10 +136,14 @@ BUTTONS
 ### CODE : SAVING AUDIO AS A WAV FILE
 
 -----------
-### CODE : CONVERT TO WAV
+### CODE : SAVING MULTIPLE WAV FILES
 
 Download code [here]
 
+
+
+////////
+NEXT SECTION IS IN WORK IN PROGRESS...
 
 -----------
 ### CODE : ADD LED and POT
