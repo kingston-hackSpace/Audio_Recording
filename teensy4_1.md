@@ -78,8 +78,6 @@ BUTTONS
 | Pin **28**  / GND     |  **Play**   |
 
 
-
-
 -----------
 ### CODE : REC EXAMPLE
 
@@ -87,6 +85,14 @@ BUTTONS
 Let's test Teensy by running one of the many Teensy Audio Library ready‑made examples:
 
 - Open the Arduino IDE (Windows) or Teensyduino (macOS):
+
+- Go to File → Examples → SD → Card Info
+
+- Upload the code to your board and open the Serial Monitor
+
+    - If you have library error messages: The teensy uses its one libraries. If you have a duplicated library, such as the SdFat, you might have a library conflict. Try removing the conflicting libraries from your Arudino/Documents/libraries
+
+    - If you get a error message in the Serial Monitor: check that you selected the correct *chipSelect*. You cannot use 2 SD cards, you must select of the one build in your board, or the one in the audio shield.  
 
 - Go to File → Examples → Audio → Recorder. 
 
