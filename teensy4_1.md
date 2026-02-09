@@ -71,11 +71,11 @@ Wire as follows:
     
 BUTTONS
 
-| Teensy Pin → Other side of button | Function |
+| Teensy Pin / Other side of button | Function |
 | -------------------- | ----------- |
-| Pin **0**  → GND     |  **Record** |
-| Pin **1**  → GND     |  **Stop**   |
-| Pin **2**  → GND     |  **Play**   |
+| Pin **24**  / GND     |  **Record** |
+| Pin **25**  / GND     |  **Stop**   |
+| Pin **28**  / GND     |  **Play**   |
 
 
 
