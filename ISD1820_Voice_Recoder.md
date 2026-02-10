@@ -73,9 +73,9 @@ See wiring [here](https://github.com/kingston-hackSpace/Audio_Recording/blob/mai
 
 The following codes record audio for 3 seconds, then play (4 seconds). They rec and play in loop. 
 
-[Automatic REC & PLAY with Arduino using delay]
+[Automatic REC & PLAY with Arduino using delay](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/AudioREC_withArduino_delay.ino)
 
-[Automatic REC & PLAY with Arduino using millis]
+[Automatic REC & PLAY with Arduino using millis](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/AudioREC_withArduino_millis.ino)
 
 ----
 ### More tutorials
