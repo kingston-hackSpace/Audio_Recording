@@ -69,7 +69,13 @@ See wiring [here](https://github.com/kingston-hackSpace/Audio_Recording/blob/mai
 
 - REC to Digital pin 2
 
-**Code:** Set the pin LOW initially. To play once, set the pin HIGH briefly (e.g., 100 ms), then return LOW.
+**Code:** 
+
+The following codes record audio for 3 seconds, then play (4 seconds). They rec and play in loop. 
+
+[Automatic REC & PLAY with Arduino using delay]
+
+[Automatic REC & PLAY with Arduino using millis]
 
 ----
 ### More tutorials
