@@ -75,6 +75,8 @@ The following codes record audio for 3 seconds, then play (4 seconds). They rec 
 
 [Automatic REC & PLAY with Arduino using delay](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/AudioREC_withArduino_delay.ino)
 
+If you haven't used millis() before, follow [this tutorial before continue using the recorder](https://github.com/kingston-hackSpace/millis)
+
 [Automatic REC & PLAY with Arduino using millis](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/AudioREC_withArduino_millis.ino)
 
 
