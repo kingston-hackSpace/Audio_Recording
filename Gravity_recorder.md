@@ -4,7 +4,7 @@ Learn more [here](https://www.dfrobot.com/product-2359.html)
 
 ----
 
-## Tutorial
+## TUTORIAL
 
 ----
 ### HARDWARE
