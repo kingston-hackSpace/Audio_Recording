@@ -11,7 +11,7 @@
 
 - Records in an micro-SD Card.
 
-### [Gravity: I2C Voice Recorder Module EDU](https://www.dfrobot.com/product-2359.html)
+### [Gravity: I2C Voice Recorder Module EDU](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/Gravity_recorder.md)
 
 - Stand-alone recorder/playback, or programmable with a microcontroller. It is compatible with Arduino AVR / micro:bit / mPython / Firebeetle-ESP32 Development Board.
 
