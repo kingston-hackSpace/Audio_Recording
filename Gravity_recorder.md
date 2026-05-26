@@ -9,8 +9,25 @@ Learn more [here](https://www.dfrobot.com/product-2359.html)
 ----
 ### HARDWARE
 
+- Arduino UNO
+
+- Gravity I2C Voice Recorder
+
+- Speaker 
+
+- Push-buttons (x4)
+
+- I2C connector
+
+  
 ----
 ### WIRING
+
+Wiring for Arduino UNO / Arduino Nano
+
+Wiring for Arduino Nano R4
+
+Wiring for ESP32
 
 ----
 ### CODE and INSTRUCTIONS
