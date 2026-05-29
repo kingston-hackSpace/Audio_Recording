@@ -11,13 +11,8 @@
 
 - Records in an micro-SD Card.
 
-### [Gravity: I2C Voice Recorder Module EDU](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/Gravity_recorder.md)
+---
 
-- Stand-alone recorder/playback, or programmable with a microcontroller. It is compatible with Arduino AVR / micro:bit / mPython / Firebeetle-ESP32 Development Board.
+### NOT RECOMMENDED
 
-- Supports Gravity I2C interface.
-
-- Output for headphones or speaker (jack 3.5mm) + built-in amplifier. 
-
-- Can store up to 10 tracks on its internal memory, 100milliseconds each (~1min 40sec)
-
+[Gravity: I2C Voice Recorder Module EDU](https://www.dfrobot.com/product-2359.html) - This board is not recommended to use due to its low audio quality. 
