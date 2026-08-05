@@ -1,5 +1,10 @@
 # Audio Recording
 
+### [XIAO ESP32-S3 Sense recording/playback]()
+
+- Extension board includes microphone and a micro-SD card slot. 
+
+
 ### [ISD1820 Sound/Voice recording/playback](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/ISD1820_Voice_Recoder.md)
 
 - Simple sound recording and playback module designed for short voice or sound clips. 
