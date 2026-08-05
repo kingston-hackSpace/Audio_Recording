@@ -1,6 +1,6 @@
 # Audio Recording
 
-### [XIAO ESP32-S3 Sense recording/playback]()
+### [XIAO ESP32-S3 Sense recording/playback](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/XIAO-ESP32-S3-Sense_rec-and-play.md)
 
 - Extension board includes microphone and a micro-SD card slot. 
 
