@@ -52,11 +52,35 @@ Wire as follows:
 Reference image [here](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/Teensy41__audio_rec_bb.jpg)
 
 -----------
-### CODE : RECORDER EXAMPLE (record, play and overwrite)
+### CODE : TESTING SD CARD
+
+- Open the Arduino IDE (Windows) or Teensyduino (macOS):
+
+- Go to File → Examples → SD → Card Info
+
+- Upload the code to your board and open the Serial Monitor
+
+    - If you have library error messages: The teensy uses its own libraries. If you have a duplicated library, such as the SdFat, you might have a library conflict. Try fixing the issue by removing the conflicting libraries from your Ardudino/Documents/libraries
+
+    - If you get a error message in the Serial Monitor: check that you selected the correct *chipSelect*. You cannot use 2 SD cards, you must select of only one: the built-in SD ard of your board, or the one in the audio shield.
+ 
+    - A sucessfull SD result should show your the SD card info.
+      
+-----------
+### CODE : RECORDER EXAMPLE (1 TRACK THAT OVERWRITES)
+
 
 - Go to File → Examples → Audio → Recorder. 
 
 - This sketch will record audio from the electret microphone and save it as a .RAW file to the SD card, and play it back (mono).
+
+- Scroll down the sketch and type the right output pins. It should look like:
+
+  ```
+  Bounce buttonRecord = Bounce(24, 8);
+  Bounce buttonStop = Bounce(25, 8);
+  Bounce buttonPlay = Bounce(28, 8);
+  ```
 
 - Just under the previous Bounce section, you need to select the right audio input. It should look like:
 
@@ -70,17 +94,23 @@ Reference image [here](https://github.com/kingston-hackSpace/Audio_Recording/blo
   ```
   #define SDCARD_CS_PIN BUILTIN_SDCARD
   ```
-  
+
+- Scroll down the sketch and replace the push button pin numbers. It should look like:
+
+  ```
+  pinMode(24, INPUT_PULLUP);
+  pinMode(25, INPUT_PULLUP);
+  pinMode(26, INPUT_PULLUP);
+  ```  
+
 - Upload the code to your Teensy board. 
 
 - Test by pressing the buttons to rec, play and stop.
-
+  
 -----------
 ### CODE : SAVING MULTIPLE WAV FILES
 
 Download code [here](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/recorder_WAV.ino)
-
-
 
 ----------
 # NEXT SECTION IS IN WORK IN PROGRESS...
