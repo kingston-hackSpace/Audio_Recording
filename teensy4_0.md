@@ -12,9 +12,9 @@ Follow the installation steps [here](https://github.com/kingston-hackSpace/Teens
 ---
 ### HARDWARE
 
-- Teensy 4.1 
+- Teensy 4.0
 
-- Teensy Audio Shield with electret microphone (soldered)
+- Teensy Audio Shield with electret microphone
 
 - USB‑A to USB‑Micro cable
 
@@ -22,7 +22,7 @@ Follow the installation steps [here](https://github.com/kingston-hackSpace/Teens
 
 - headphones
 
-- Push buttons (x3)
+- Push buttons (x2)
 
 - LED + 220 ohms resistor
 
@@ -36,18 +36,36 @@ Read more about the audio shield [here](https://www.pjrc.com/store/teensy3_audio
 
 
 -----------
-### WIRING
+### PINS NOTE
 
-Insert the micro-SD card into the Teensy 4.1 board (not the audio shield)
+[Teensy 4.0 PINOUT here](https://github.com/kingston-hackSpace/Teensy/blob/main/Teensy4_0_pinout.pdf)
+
+NOTE: The Teensy 4.0 has 40 pins available, however, some of them will be in used by the Audio Shield and SD card. See below:
+
+Busy pins:
+    
+    - 7, 8 —> Audio Shield I2S data
+
+    - 18, 19 —> Audio Shield I2C (codec control)
+
+    - 20, 21, 23 —> Audio Shield I2S clocks
+
+    - 10, 11, 12, 13 —> SPI to the onboard SD card
+
+Pins available:
+
+    - 0–6, 9, 14, 16, 17, 22
+
+-----------
+### 
 
 Wire as follows:
 
 | Wiring | Function |
 | -------------------- | ----------- |
-| Pin **24**  / Button 1 / GND     |  **Record** |
-| Pin **25**  / Button 2 / GND     |  **Stop**   |
-| Pin **28**  / Button 3 / GND     |  **Play**   |
-| Pin **32**  / Resistor 220ohms / LED+ / LED- / GND     |  **LED REC**   |
+| Pin **2**  / Button 1 / GND     |  **Record** |
+| Pin **3**  / Button 2 / GND     |  **Play**   |
+| Pin **4**  / Resistor 220ohms / LED+ / LED- / GND     |  **LED REC**   |
 
 Reference image [here](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/Teensy41__audio_rec_bb.jpg)
 
