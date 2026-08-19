@@ -76,6 +76,10 @@ Reference image [here](https://github.com/kingston-hackSpace/Audio_Recording/blo
 
 - Go to File → Examples → SD → Card Info
 
+- Go to **Tools** and select the board > Teensyduino > Teensy 4.0
+
+- Go to **Tools** and select the corresponding port
+
 - Upload the code to your board and open the Serial Monitor
 
     - If you have library error messages: The teensy uses its own libraries. If you have a duplicated library, such as the SdFat, you might have a library conflict. Try fixing the issue by removing the conflicting libraries from your Ardudino/Documents/libraries
