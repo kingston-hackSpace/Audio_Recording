@@ -67,7 +67,7 @@ Wire as follows:
 | Pin **3**  / Button 2 / GND     |  **Play**   |
 | Pin **4**  / Resistor 220ohms / LED+ / LED- / GND     |  **LED REC**   |
 
-Reference image [here](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/Teensy41__audio_rec_bb.jpg)
+Reference image [here](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/Teensy_40_rec_bb.jpg)
 
 -----------
 ### CODE : TESTING SD CARD
