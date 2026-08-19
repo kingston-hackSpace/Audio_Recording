@@ -9,7 +9,7 @@
 
 # Teensy
 
-### [Sound recording and playback with Teensy 4.0](https://github.com/kingston-hackSpace/audio_recording/blob/main/teensy4_1.md)
+### [Sound recording/playback with Teensy 4.0]
 
 - The Teensy 4.0 is a microcontroller built for audio projects. Best quality option for audio recording.  
 
