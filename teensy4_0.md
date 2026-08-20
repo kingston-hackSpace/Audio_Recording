@@ -14,7 +14,7 @@ Follow the installation steps [here](https://github.com/kingston-hackSpace/Teens
 
 - Teensy 4.0
 
-- Teensy Audio Shield with electret microphone
+- Teensy Audio Shield REV-D with an electret microphone
 
 - USB‑A to USB‑Micro cable
 
@@ -30,7 +30,7 @@ Follow the installation steps [here](https://github.com/kingston-hackSpace/Teens
 ---
 ### TEENSY AUDIO SHIELD
 
-*note*: You do not need an external mic when you have the Audio Shield. The shield already provides an electret mic.
+*note*: Our hackSpace kit provides an electric mic with the Teensy and Audio Shield. 
 
 Read more about the audio shield [here](https://www.pjrc.com/store/teensy3_audio.html)
 
@@ -65,7 +65,8 @@ Wire as follows:
 | -------------------- | ----------- |
 | Pin **2**  / Button 1 / GND     |  **Record** |
 | Pin **3**  / Button 2 / GND     |  **Play**   |
-| Pin **4**  / Resistor 220ohms / LED+ / LED- / GND     |  **LED REC**   |
+| Pin **4**  / Button 3 / GND     |  **Stop**   |
+| Pin **5**  / Resistor 220ohms / LED+ / LED- / GND     |  **LED REC**   |
 
 Reference image [here](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/Teensy_40_rec_bb.jpg)
 
@@ -74,7 +75,7 @@ Reference image [here](https://github.com/kingston-hackSpace/Audio_Recording/blo
 
 
 -----------
-### CODE : REC aND PLAY MULTIPLE TRACKS
+### CODE : REC and PLAY MULTIPLE TRACKS
 
 
  POT AND SCREEN
