@@ -22,7 +22,7 @@ Follow the installation steps [here](https://github.com/kingston-hackSpace/Teens
 
 - headphones
 
-- Push buttons (x2)
+- Push buttons (x3)
 
 - LED + 220 ohms resistor
 
@@ -70,56 +70,14 @@ Wire as follows:
 Reference image [here](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/Teensy_40_rec_bb.jpg)
 
 -----------
-### CODE : RECORDER EXAMPLE (1 TRACK THAT OVERWRITES)
+### CODE : REC and PLAY 1 TRACK THAT OVERWRITES
 
-- Go to File → Examples → Audio → Recorder. 
-
-- This sketch will record audio from the electret microphone and save it as a .RAW file to the SD card, and play it back (mono).
-
-- Scroll down the sketch and type the right output pins. It should look like:
-
-  ```
-  Bounce buttonRecord = Bounce(24, 8);
-  Bounce buttonStop = Bounce(25, 8);
-  Bounce buttonPlay = Bounce(28, 8);
-  ```
-
-- Just under the previous Bounce section, you need to select the right audio input. It should look like:
-
-  ```
-  //const int myInput = AUDIO_INPUT_LINEIN;
-  const int myInput = AUDIO_INPUT_MIC;
-  ```
-- Just under the previous mic section, you need to select the right SD card pin. It should look like:
-
-  ```
-  #define SDCARD_CS_PIN BUILTIN_SDCARD
-  ```
-
-- Scroll down the sketch and replace the push button pin numbers. It should look like:
-
-  ```
-  pinMode(24, INPUT_PULLUP);
-  pinMode(25, INPUT_PULLUP);
-  pinMode(26, INPUT_PULLUP);
-  ```  
-  
-- Upload the code to your Teensy board. 
-
-- Test by pressing the buttons to rec, play and stop.
 
 -----------
-### CODE : SAVING MULTIPLE WAV FILES
-
-Download code [here](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/recorder_WAV.ino)
+### CODE : REC aND PLAY MULTIPLE TRACKS
 
 
-
-----------
-# NEXT SECTION IS IN WORK IN PROGRESS...
-
------------
-### CODE : ADD LED and POT
+ POT AND SCREEN
 
 | Component                | Teensy Pin | Notes / Connection                                                                                               |
 | ------------------------ | ---------- | ---------------------------------------------------------------------------------------------------------------- |
