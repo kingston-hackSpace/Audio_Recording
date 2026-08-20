@@ -20,9 +20,7 @@ Follow the installation steps [here](https://github.com/kingston-hackSpace/Teens
 
 - micro SD card (4GB or bigger)
 
-- speaker
-
-- amplifier
+- capsule speaker
 
 - Push buttons (x3)
 
@@ -75,6 +73,8 @@ Reference image [here](https://github.com/kingston-hackSpace/Audio_Recording/blo
 -----------
 ### CODE : REC and PLAY 1 TRACK THAT OVERWRITES
 
+Record, play and overwrite: Download and upload [this code] to your board. 
+
 
 -----------
 ### CODE : REC and PLAY MULTIPLE TRACKS
@@ -89,6 +89,24 @@ Reference image [here](https://github.com/kingston-hackSpace/Audio_Recording/blo
 
 Download code [here]
 
+-----------
+### ADD AN AMPLIFIER
+
+hardware:
+
+- Jack 3.5mm
+
+- Sparkfun Amplifier
+
+- Speaker xx
+
+- Power supply xx
+
+- Barrel connector
+
+- Barrel to USB cable
+
+- mini screw driver
 
 -----------
 ### Learn mmore about WAV and RAW audio format
