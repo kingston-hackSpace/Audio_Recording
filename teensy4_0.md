@@ -1,6 +1,6 @@
 # Teensy 4.0
 
-Build an audio recorder with Teensy 4.0
+Build an audio recorder/player with Teensy 4.0
 
 ---
 ### SET-UP
