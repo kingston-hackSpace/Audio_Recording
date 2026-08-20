@@ -1,10 +1,16 @@
-// Three-button recorder/player for Teensy 4 + Audio Shield (Rev D)
-//
-// Pins:
-//   Record button : pin 2 (hold to record, release to stop recording)
-//   Play button   : pin 3 (press to play last recording)
-//   Stop button   : pin 4 (press to stop playback)
-//   Red LED       : pin 5, through a ~220 ohm resistor
+/* 
+Three-button recorder/player for Teensy 4 + Audio Shield (Rev D)
+
+Pins:
+   LED           : pin 1
+   Record button : pin 2 (hold to record, release to stop recording)
+   Play button   : pin 3 (press to play last recording)
+   Stop button   : pin 4 (press to stop playback)
+
+
+Note: You might need to PRESS THE ONBOARD button on the Teensy to enable uploading this code
+
+*/
 
 #include <Bounce.h>
 #include <Audio.h>
@@ -29,7 +35,7 @@ Bounce buttonRecord = Bounce(2, 8);   // 8 = debounce time in ms
 Bounce buttonPlay   = Bounce(3, 8);
 Bounce buttonStop   = Bounce(4, 8);
 
-const int ledPin = 5;
+const int ledPin = 1;
 
 // which input on the audio shield will be used?
 const int myInput = AUDIO_INPUT_MIC; 
