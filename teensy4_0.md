@@ -73,8 +73,7 @@ Reference image [here](https://github.com/kingston-hackSpace/Audio_Recording/blo
 -----------
 ### CODE : REC and PLAY ONE TRACK THAT OVERWRITES
 
-Record, play and overwrite: Download and upload [this code] to your board. 
-
+Record, play and overwrite: Download and upload [this code](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/teensy_40_rec-play_overwrite.ino) to your board. 
 
 -----------
 ### CODE : REC and PLAY MULTIPLE TRACKS
@@ -87,7 +86,7 @@ Record, play and overwrite: Download and upload [this code] to your board.
 | **Recording LED**        | Pin **13** | Connect LED + resistor to 3.3 V pin through a 220 Ω resistor or connect cathode to GND depending on wiring style |
 | **Volume potentiometer** | A0         | Connect middle pin to A0, one side to 3.3 V, the other to GND. The Teensy reads it and sets output volume.       |
 
-Download code [here]
+Download code [here]()
 
 -----------
 ### ADD AN AMPLIFIER
