@@ -20,7 +20,9 @@ Follow the installation steps [here](https://github.com/kingston-hackSpace/Teens
 
 - micro SD card (4GB or bigger)
 
-- headphones
+- speaker
+
+- amplifier
 
 - Push buttons (x3)
 
