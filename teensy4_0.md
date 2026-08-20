@@ -71,7 +71,7 @@ Wire as follows:
 Reference image [here](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/Teensy_40_rec.jpg)
 
 -----------
-### CODE : REC and PLAY 1 TRACK THAT OVERWRITES
+### CODE : REC and PLAY ONE TRACK THAT OVERWRITES
 
 Record, play and overwrite: Download and upload [this code] to your board. 
 
