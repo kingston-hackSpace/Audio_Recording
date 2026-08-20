@@ -70,25 +70,6 @@ Wire as follows:
 Reference image [here](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/Teensy_40_rec_bb.jpg)
 
 -----------
-### CODE : TESTING SD CARD
-
-- Open the Arduino IDE (Windows) or Teensyduino (macOS):
-
-- Go to File → Examples → SD → Card Info
-
-- Go to **Tools** and select the board > Teensyduino > Teensy 4.0
-
-- Go to **Tools** and select the corresponding port
-
-- Upload the code to your board and open the Serial Monitor
-
-    - If you have library error messages: The teensy uses its own libraries. If you have a duplicated library, such as the SdFat, you might have a library conflict. Try fixing the issue by removing the conflicting libraries from your Ardudino/Documents/libraries
-
-    - If you get a error message in the Serial Monitor: check that you selected the correct *chipSelect*. You cannot use 2 SD cards, you must select of only one: the built-in SD ard of your board, or the one in the audio shield.
- 
-    - A sucessfull SD result should show your the SD card info. 
- 
------------
 ### CODE : RECORDER EXAMPLE (1 TRACK THAT OVERWRITES)
 
 - Go to File → Examples → Audio → Recorder. 
