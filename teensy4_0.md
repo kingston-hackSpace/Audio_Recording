@@ -68,7 +68,7 @@ Wire as follows:
 | Pin **4**  / Button 3 / GND     |  **Stop**   |
 | Pin **5**  / Resistor 220ohms / LED+ / LED- / GND     |  **LED REC**   |
 
-Reference image [here](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/Teensy_40_rec_bb.jpg)
+Reference image [here](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/Teensy_40_rec.jpg)
 
 -----------
 ### CODE : REC and PLAY 1 TRACK THAT OVERWRITES
