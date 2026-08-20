@@ -2,10 +2,11 @@
 Three-button recorder/player for Teensy 4 + Audio Shield (Rev D)
 
 Pins:
-   LED           : pin 1
+   
    Record button : pin 2 (hold to record, release to stop recording)
    Play button   : pin 3 (press to play last recording)
    Stop button   : pin 4 (press to stop playback)
+   LED           : pin 5
 
 
 Note: You might need to PRESS THE ONBOARD button on the Teensy to enable uploading this code
@@ -19,7 +20,6 @@ Note: You might need to PRESS THE ONBOARD button on the Teensy to enable uploadi
 #include <SD.h>
 #include <SerialFlash.h>
 
-// GUItool: begin automatically generated code
 AudioInputI2S            i2s2;
 AudioRecordQueue         queue1;
 AudioPlaySdWav            playWav1;
@@ -28,14 +28,13 @@ AudioConnection           patchCord1(i2s2, 0, queue1, 0);
 AudioConnection           patchCord2(playWav1, 0, i2s1, 0);
 AudioConnection           patchCord3(playWav1, 1, i2s1, 1);
 AudioControlSGTL5000      sgtl5000_1;
-// GUItool: end automatically generated code
 
 // Buttons — classic Bounce library, bundled with Teensyduino
 Bounce buttonRecord = Bounce(2, 8);   // 8 = debounce time in ms
 Bounce buttonPlay   = Bounce(3, 8);
 Bounce buttonStop   = Bounce(4, 8);
 
-const int ledPin = 1;
+const int ledPin = 5;
 
 // which input on the audio shield will be used?
 const int myInput = AUDIO_INPUT_MIC; 
@@ -46,13 +45,17 @@ const int myInput = AUDIO_INPUT_MIC;
 #define SDCARD_MOSI_PIN  7    // Teensy 4 ignores this, uses pin 11 internally
 #define SDCARD_SCK_PIN   14   // Teensy 4 ignores this, uses pin 13 internally
 
-// Remember which mode we're in
 int mode = 0;  // 0 = stopped, 1 = recording, 2 = playing
 
 // The file being recorded to / played from
 File frec;
 const char *recordingFile = "RECORD.WAV";
 unsigned long dataBytesWritten = 0;
+
+// Grace period after starting playback before we start checking
+// isPlaying(), so a not-yet-started codec doesn't look "stopped"
+unsigned long playStartTime = 0;
+const unsigned long PLAY_GRACE_MS = 150;
 
 void setup() {
   Serial.begin(9600);
@@ -62,9 +65,7 @@ void setup() {
   pinMode(4, INPUT_PULLUP);
   pinMode(ledPin, OUTPUT);
   digitalWrite(ledPin, LOW);
-
-  // Audio connections require memory, and the record queue
-  // uses this memory to buffer incoming audio.
+  
   AudioMemory(60);
 
   // Enable the audio shield, select input, and enable output
@@ -105,16 +106,21 @@ void loop() {
     if (mode == 1) stopRecording();
   }
 
-  // Play button pressed -> play back the last recording
+  // Play button pressed -> (re)start playback
   if (buttonPlay.fallingEdge()) {
-    Serial.println("Play button pressed");
-    if (mode == 0) startPlaying();
+    Serial.print("Play button pressed, mode=");
+    Serial.println(mode);
+    if (mode != 1) {
+      startPlaying();
+    } else {
+      Serial.println("  ignored: currently recording");
+    }
   }
 
   // Stop button pressed -> stop playback
   if (buttonStop.fallingEdge()) {
     Serial.println("Stop button pressed");
-    if (mode == 2) stopPlaying();
+    stopPlaying();
   }
 
   // Keep the current mode going
@@ -185,15 +191,21 @@ void stopRecording() {
 
 void startPlaying() {
   Serial.println("startPlaying");
+  playWav1.stop();  // force a clean state before starting, no matter what came before
   if (SD.exists(recordingFile)) {
     playWav1.play(recordingFile);
+    playStartTime = millis();
     mode = 2;
   } else {
     Serial.println("No recording yet.");
+    mode = 0;
   }
 }
 
 void continuePlaying() {
+  if (millis() - playStartTime < PLAY_GRACE_MS) {
+    return; // give the codec a moment to actually start before checking
+  }
   if (!playWav1.isPlaying()) {
     playWav1.stop();
     mode = 0;
