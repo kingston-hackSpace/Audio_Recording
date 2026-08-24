@@ -73,8 +73,22 @@ Reference image [here](https://github.com/kingston-hackSpace/Audio_Recording/blo
 -----------
 ### CODE : REC and PLAY ONE TRACK THAT OVERWRITES
 
-Record, play and overwrite: Download and upload [this code](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/teensy_40_rec-play_overwrite.ino) to your board. 
+Download and upload [this code](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/teensy_40_rec-play_overwrite.ino) to your board. 
 
+Plug the Teensy to your computer. 
+
+When uploading the code, remember go to **Tools** and select:
+
+    Board: Teensy 4.0
+    Port: (varies, but the one connected to usb)
+
+PRESS THE ON-BOARD RESET BUTTON. See [reference image here]()
+
+If you get an error message, unplug the Teensy. Plug again and PRESS THE ON-BOARD RESET BUTTON. See [reference image here](). Now try uploading the code again. 
+
+Ask a technician if you have any further issues. 
+
+    
 -----------
 ### CODE : REC and PLAY MULTIPLE TRACKS
 
