@@ -108,11 +108,20 @@ Encoder A > Teensy pin 6
 Encoder B > Teensy pin 9
 Encoder C > Teensy GND
 
-[See wiring diagram here](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/Teensy_40_rec_encoder_bb.jpg)
+OLED SCREEN GND > Teensy GND
+OLED SCREEN VCC >
+OLED SCREEN SCL >
+OLED SCREEN SDA >
+
+[See wiring diagram here]
 
 **CODE AND INSTRUCTIONS**
 
-Download and upload [this code here]()
+- **Test the encoder:** download and upload [this code](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/Teensy_40_rec_encoder.ino)
+
+- Open the Serial Monitor to confirm that the encoder is working correctly to select the tracks.
+
+- **Test the OLED screen:** download and upload [this code]
 
 -----------
 ### ADD AN AMPLIFIER
