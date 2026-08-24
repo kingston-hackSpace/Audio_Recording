@@ -73,21 +73,23 @@ Reference image [here](https://github.com/kingston-hackSpace/Audio_Recording/blo
 -----------
 ### CODE : REC and PLAY ONE TRACK THAT OVERWRITES
 
-Download and upload [this code](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/teensy_40_rec-play_overwrite.ino) to your board. 
+- Download [this code](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/teensy_40_rec-play_overwrite.ino) and open it on Arduino IDE. 
 
-Plug the Teensy to your computer. 
+- Plug the Teensy to your computer. 
 
-When uploading the code, remember go to **Tools** and select:
+- Before uploading the code, remember go to **Tools** and select:
 
-    Board: Teensy 4.0
-    Port: (varies, but the one connected to usb)
+    - Board: Teensy 4.0
+    
+    - Port: (varies, but the one connected to usb)
 
-PRESS THE ON-BOARD RESET BUTTON. See [reference image here](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/reset_teensy.png)
+- PRESS THE ON-BOARD RESET BUTTON. See [reference image here](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/reset_teensy.png)
 
-If you get an error message, unplug the Teensy. Plug again and PRESS THE ON-BOARD RESET BUTTON. See [reference image here](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/reset_teensy.png). Now try uploading the code again. 
+- If you get an error message, unplug the Teensy. Plug again and PRESS THE ON-BOARD RESET BUTTON. See [reference image here](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/reset_teensy.png). Now try uploading the code again. 
 
-Ask a technician if you have any further issues. 
+- Ask a technician if you have any further issues. 
 
+- Test your recording/player device! :)
     
 -----------
 ### CODE : REC and PLAY MULTIPLE TRACKS
