@@ -94,13 +94,19 @@ Reference image [here](https://github.com/kingston-hackSpace/Audio_Recording/blo
 -----------
 ### CODE : REC and PLAY MULTIPLE TRACKS
 
+To record multiple tracks, we will add a small screen and a rotary encoder to visualize and select which track to play.
 
- POT AND SCREEN
+**HARDWARE to add**
 
-| Component                | Teensy Pin | Notes / Connection                                                                                               |
-| ------------------------ | ---------- | ---------------------------------------------------------------------------------------------------------------- |
-| **Recording LED**        | Pin **13** | Connect LED + resistor to 3.3 V pin through a 220 Ω resistor or connect cathode to GND depending on wiring style |
-| **Volume potentiometer** | A0         | Connect middle pin to A0, one side to 3.3 V, the other to GND. The Teensy reads it and sets output volume.       |
+- [Sparkfun rotary encoder](https://github.com/kingston-hackSpace/Rotary_encoder)
+
+- [OLED Screen 0.96" (128x64)](https://github.com/kingston-hackSpace/All_Display_Screens_for_Arduino/blob/main/Seeed_display.md) 
+
+**WIRING**
+
+[See wiring diagram here]
+
+**CODE AND INSTRUCTIONS**
 
 Download code [here]()
 
