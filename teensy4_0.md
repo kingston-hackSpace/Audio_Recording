@@ -118,7 +118,7 @@ OLED SCREEN SCL > Teensy pin 19
 
 OLED SCREEN SDA > Teensy pin 18
 
-[See wiring diagram here]
+[See wiring diagram here](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/Teensy_40_rec_multipleTracks_bb.jpg)
 
 **CODE AND INSTRUCTIONS**
 
