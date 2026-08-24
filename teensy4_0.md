@@ -104,12 +104,15 @@ To record multiple tracks, we will add a small screen and a rotary encoder to vi
 
 **WIRING**
 
+Encoder A > Teensy pin 6
+Encoder B > Teensy pin 9
+Encoder C > Teensy GND
+
 [See wiring diagram here]
 
 **CODE AND INSTRUCTIONS**
 
 Download code [here]()
-
 
 -----------
 ### ADD AN AMPLIFIER
