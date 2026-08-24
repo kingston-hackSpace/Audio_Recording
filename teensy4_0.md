@@ -117,11 +117,17 @@ OLED SCREEN SDA >
 
 **CODE AND INSTRUCTIONS**
 
-- **Test the encoder:** download and upload [this code](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/Teensy_40_rec_encoder.ino)
+- Install the screen library:
 
-- Open the Serial Monitor to confirm that the encoder is working correctly to select the tracks.
+    - In the Arduino IDE go to Sketch -> Include Libraries -> Manage libraries...
 
-- **Test the OLED screen:** download and upload [this code]
+    - Search for **Adafruit_SSD1306 by Adafruit** and choose to install the library. 
+
+- **Test the encoder:** download and upload [this code](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/Teensy_40_rec_encoder.ino) to your board.
+
+- Open the **Serial Monitor** to confirm that the encoder is working correctly to select the tracks.
+
+- **Test the OLED screen:** download and upload [this code] to visualize track selection on the OLED screen.
 
 -----------
 ### ADD AN AMPLIFIER
