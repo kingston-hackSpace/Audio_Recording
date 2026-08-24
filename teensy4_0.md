@@ -57,9 +57,9 @@ Pins available:
     - 0–6, 9, 14, 16, 17, 22
 
 -----------
-### 
+### WIRING
 
-Wire as follows:
+Wire your electronics as follows:
 
 | Wiring | Function |
 | -------------------- | ----------- |
