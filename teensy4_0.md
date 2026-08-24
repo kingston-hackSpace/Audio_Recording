@@ -36,7 +36,7 @@ Read more about the audio shield [here](https://www.pjrc.com/store/teensy3_audio
 
 
 -----------
-### PINS NOTE
+### NOTE ABOUT TEENSY PINS
 
 [Teensy 4.0 PINOUT here](https://github.com/kingston-hackSpace/Teensy/blob/main/Teensy4_0_pinout.pdf)
 
