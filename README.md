@@ -18,9 +18,9 @@
 
 ### [Sound recording with Teensy 4.1](https://github.com/kingston-hackSpace/audio_recording/blob/main/teensy4_1.md)
 
-- The Teensy 4.1 is a microcontroller built for audio projects. Best quality option for audio recording.  
+- Use the Teensy 4.1 (instead of the 4.0) if you need more pins for sensors or other devices.
 
-- Records in an micro-SD Card.
+- Use the Teensy 4.1 (instead of the 4.0) if you need an onboard micro-SD Card slot. 
 
 
 # Simple voice recorder
