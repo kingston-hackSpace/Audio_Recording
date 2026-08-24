@@ -105,13 +105,18 @@ To record multiple tracks, we will add a small screen and a rotary encoder to vi
 **WIRING**
 
 Encoder A > Teensy pin 6
+
 Encoder B > Teensy pin 9
+
 Encoder C > Teensy GND
 
 OLED SCREEN GND > Teensy GND
-OLED SCREEN VCC >
-OLED SCREEN SCL >
-OLED SCREEN SDA >
+
+OLED SCREEN VCC > Teensy 3.3V
+
+OLED SCREEN SCL > Teensy pin 19
+
+OLED SCREEN SDA > Teensy pin 18
 
 [See wiring diagram here]
 
