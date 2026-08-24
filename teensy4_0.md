@@ -132,7 +132,7 @@ OLED SCREEN SDA > Teensy pin 18
 
 - Open the **Serial Monitor** to confirm that the encoder is working correctly to select the tracks.
 
-- **Test the OLED screen:** download and upload [this code] to visualize track selection on the OLED screen.
+- **Test the OLED screen:** download and upload [this code](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/Teensy_40_rec_multipleTracks.ino) to visualize track selection on the OLED screen.
 
 -----------
 ### ADD AN AMPLIFIER (PENDING)
