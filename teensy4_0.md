@@ -135,7 +135,7 @@ OLED SCREEN SDA > Teensy pin 18
 - **Test the OLED screen:** download and upload [this code] to visualize track selection on the OLED screen.
 
 -----------
-### ADD AN AMPLIFIER
+### ADD AN AMPLIFIER (PENDING)
 
 hardware:
 
