@@ -108,11 +108,11 @@ Encoder A > Teensy pin 6
 Encoder B > Teensy pin 9
 Encoder C > Teensy GND
 
-[See wiring diagram here]
+[See wiring diagram here](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/Teensy_40_rec_encoder_bb.jpg)
 
 **CODE AND INSTRUCTIONS**
 
-Download code [here]()
+Download and upload [this code here]()
 
 -----------
 ### ADD AN AMPLIFIER
