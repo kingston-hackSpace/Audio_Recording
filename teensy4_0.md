@@ -135,17 +135,17 @@ OLED SCREEN SDA > Teensy pin 18
 - **Test the OLED screen:** download and upload [this code](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/Teensy_40_rec_multipleTracks.ino) to visualize track selection on the OLED screen.
 
 -----------
-### ADD AN AMPLIFIER (PENDING)
+### ADD AN AMPLIFIER
 
-hardware:
+**HARDWARE to add**
 
 - Jack 3.5mm
 
 - Sparkfun Amplifier
 
-- Speaker xx
+- Speaker 4ohms 3W
 
-- Power supply xx
+- Power supply 45W (USB, USB-C connectors)
 
 - Barrel connector
 
