@@ -20,7 +20,7 @@ Follow the installation steps [here](https://github.com/kingston-hackSpace/Teens
 
 - micro SD card (4GB or bigger)
 
-- capsule speaker
+- capsule speaker / headphones
 
 - Push buttons (x3)
 
@@ -139,19 +139,63 @@ OLED SCREEN SDA > Teensy pin 18
 
 **HARDWARE to add**
 
-- Jack 3.5mm
-
-- Sparkfun Amplifier
+- SparkFun Qwiic Speaker Amp TPA2016D2
 
 - Speaker 4ohms 3W
 
-- Power supply 45W (USB, USB-C connectors)
+- Qwiic connector 
+
+- Power supply 5V (2A or higher). DONOT use USB-C to power, only USB to warranty 5V only. 
 
 - Barrel connector
 
 - Barrel to USB cable
 
 - mini screw driver
+
+**WIRING**
+
+- Remove your capsule speaker / headphone from the Audio Shield (we won't be using the jack connector anymore)
+
+- Wire the **barrel connector** to the **amplifier**
+
+- Wire the speaker to any of the amplifier's Right of Left **speaker OUTPUT** connectors
+
+- Wire **potentiometer** to Audio Shield's volume pins as follows:
+
+      - POT left > Audio Shield GND
+
+      - POT middle > Audio Shield VOL
+
+      - POT right > Audio Shield 3.3V
+
+- Plug the **Qwiic connector** the amplifier.
+
+- At the other end of the **Qwiic connector**, wire as follows:
+
+    - Qwiic black wire > Teensy GND
+ 
+    - Qwiic yellow wire > Teensy SCL
+ 
+    - Qwiic blue wire > Teensy SDA
+ 
+    - Qwiic red wire > not connected to anything!      
+
+- From the amplifier's **Audio-in: GND/R/L**, wire to the Audio Shield's **LINE OUT: R/GND/L**.
+
+- Power your amplifier using a 5V (2A or higher) power supply
+
+**CODE AND INSTRUCTIONS**
+
+NOTE: volume can be controlled via the Audio Shield's potentiometer. Disable POT via code. 
+
+- Install the following libraries:
+
+    - In the Arduino IDE go to Sketch -> Include Libraries -> Manage libraries...
+
+    - Search for **Adafruit TPA2016D2** and choose to install the library. 
+
+- **Test:** download and upload [this code]to your board.
 
 -----------
 ### Learn mmore about WAV and RAW audio format
