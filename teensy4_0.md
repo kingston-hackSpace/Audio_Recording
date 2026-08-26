@@ -195,7 +195,7 @@ NOTE: volume can be controlled via the Audio Shield's potentiometer. Disable POT
 
     - Search for **Adafruit TPA2016D2** and choose to install the library. 
 
-- **Test:** download and upload [this code]to your board.
+- **Test audio amplifier and POT:** download and upload [this code](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/Teensy_40_rec_multipleTracks_amplifer.ino) to your board.
 
 -----------
 ### Learn mmore about WAV and RAW audio format
