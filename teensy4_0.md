@@ -161,7 +161,7 @@ OLED SCREEN SDA > Teensy pin 18
 
 - Wire the speaker to any of the amplifier's Right of Left **speaker OUTPUT** connectors
 
-- Wire the **potentiometer** to Audio Shield's volume pins as follows ([see reference image here]):
+- Wire the **potentiometer** to Audio Shield's volume pins as follows ([see reference image here](https://github.com/kingston-hackSpace/Audio_Recording/blob/main/teensy_40_POT-audioShield.jpg)):
 
     - POT left > Audio Shield GND
 
