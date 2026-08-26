@@ -161,13 +161,13 @@ OLED SCREEN SDA > Teensy pin 18
 
 - Wire the speaker to any of the amplifier's Right of Left **speaker OUTPUT** connectors
 
-- Wire **potentiometer** to Audio Shield's volume pins as follows:
+- Wire the **potentiometer** to Audio Shield's volume pins as follows ([see reference image here]):
 
-      - POT left > Audio Shield GND
+    - POT left > Audio Shield GND
 
-      - POT middle > Audio Shield VOL
+    - POT middle > Audio Shield VOL
 
-      - POT right > Audio Shield 3.3V
+    - POT right > Audio Shield 3.3V
 
 - Plug the **Qwiic connector** the amplifier.
 
