@@ -5,7 +5,7 @@ and an SSD1306 OLED showing the current track and status.
 Pins:
    Record button    : pin 2  (hold to record a NEW track, release to stop)
    Play button       : pin 3  (press to play the currently selected track)
-   Stop button       : pin 4  (press to stop playback)
+   Stop button       : pin 4  (press to stop playback, hold 3+ seconds to delete the selected track)
    Red LED           : pin 5, through a ~220ohm resistor, to GND
 
   Rotary encoder:
@@ -89,6 +89,10 @@ int lastLineOutLevel = -1; // sentinel so the first reading always applies
 int trackCount = 0;       // how many tracks exist on the SD card
 int selectedTrack = 1;    // which track number is currently selected (1-based)
 
+// Hold Stop for 3+ seconds to delete the currently selected track
+unsigned long stopPressStart = 0;
+bool deleteTriggered = false;
+const unsigned long DELETE_HOLD_MS = 3000;
 
 // Remember which mode we're in
 int mode = 0;  // 0 = stopped, 1 = recording, 2 = playing
@@ -96,6 +100,7 @@ int mode = 0;  // 0 = stopped, 1 = recording, 2 = playing
 // The file being recorded to / played from
 File frec;
 unsigned long dataBytesWritten = 0;
+int recordingTrackNumber = 0; // which track number the current recording targets
 
 // Grace period after starting playback before we start checking
 // isPlaying(), so a not-yet-started codec doesn't look "stopped"
@@ -196,10 +201,23 @@ void loop() {
     }
   }
 
-  // Stop button pressed -> stop playback (unconditional)
+  // Stop button pressed -> stop playback (unconditional), and start
+  // timing the hold in case it's held long enough to delete a track
   if (buttonStop.fallingEdge()) {
     Serial.println("Stop button pressed");
     stopPlaying();
+    stopPressStart = millis();
+    deleteTriggered = false;
+  }
+  // While Stop is held down, check if we've crossed the delete threshold
+  if (digitalRead(4) == LOW && !deleteTriggered) {
+    if (millis() - stopPressStart >= DELETE_HOLD_MS) {
+      deleteSelectedTrack();
+      deleteTriggered = true;
+    }
+  }
+  if (buttonStop.risingEdge()) {
+    deleteTriggered = false;
   }
 
   handleEncoderRotation();
@@ -304,7 +322,33 @@ void printSelection() {
   Serial.print("Selected track: ");
   Serial.print(selectedTrack);
   Serial.print(" / ");
-  Serial.println(trackCount);
+  Serial.print(trackCount);
+  if (!SD.exists(trackFilename(selectedTrack).c_str())) {
+    Serial.print("  (empty -- hold Record to fill this slot)");
+  }
+  Serial.println();
+}
+
+// Deletes the currently selected track's file from the SD card, then
+// rescans so trackCount/selectedTrack reflect what's actually left.
+// Leaves a gap in numbering rather than renumbering later tracks.
+void deleteSelectedTrack() {
+  if (trackCount == 0) {
+    Serial.println("Nothing to delete.");
+    return;
+  }
+  String filename = trackFilename(selectedTrack);
+  if (SD.exists(filename.c_str())) {
+    SD.remove(filename.c_str());
+    Serial.print("Deleted ");
+    Serial.println(filename);
+  } else {
+    Serial.print(filename);
+    Serial.println(" was already missing.");
+  }
+  scanExistingTracks();
+  printSelection();
+  displayDirty = true;
 }
 
 // ---------------------------------------------------------------
@@ -322,6 +366,7 @@ void updateDisplay() {
     display.println("No tracks");
   } else {
     display.print("Track ");
+    display.setCursor(0, 20);
     display.print(selectedTrack);
     display.print("/");
     display.println(trackCount);
@@ -329,11 +374,15 @@ void updateDisplay() {
 
   // Status line, smaller text
   display.setTextSize(1);
-  display.setCursor(0, 24);
-  switch (mode) {
-    case 1: display.println("Recording..."); break;
-    case 2: display.println("Playing...");   break;
-    default: display.println("Idle");        break;
+  display.setCursor(0, 40);
+  if (trackCount > 0 && !SD.exists(trackFilename(selectedTrack).c_str())) {
+    display.println("Empty slot");
+  } else {
+    switch (mode) {
+      case 1: display.println("Recording..."); break;
+      case 2: display.println("Playing...");   break;
+      default: display.println("Idle");        break;
+    }
   }
 
   display.display();
@@ -344,8 +393,16 @@ void updateDisplay() {
 // ---------------------------------------------------------------
 
 void startRecording() {
-  int newTrackNumber = trackCount + 1;
-  String filename = trackFilename(newTrackNumber);
+  // If the currently selected track is an empty slot (e.g. left behind
+  // by a deletion), record into that slot instead of always appending
+  // a brand-new track at the end.
+  if (trackCount > 0 && !SD.exists(trackFilename(selectedTrack).c_str())) {
+    recordingTrackNumber = selectedTrack;
+  } else {
+    recordingTrackNumber = trackCount + 1;
+  }
+
+  String filename = trackFilename(recordingTrackNumber);
   Serial.print("startRecording: ");
   Serial.println(filename);
 
@@ -389,13 +446,15 @@ void stopRecording() {
   writeWavHeader(frec, dataBytesWritten);
   frec.close();
 
-  trackCount++;
-  selectedTrack = trackCount; // auto-select the track just recorded
+  if (recordingTrackNumber > trackCount) {
+    trackCount = recordingTrackNumber; // genuinely new track, grows the count
+  }
+  selectedTrack = recordingTrackNumber; // auto-select whichever slot we just filled
   mode = 0;
   digitalWrite(ledPin, LOW);
 
   Serial.print("Saved ");
-  Serial.println(trackFilename(trackCount));
+  Serial.println(trackFilename(recordingTrackNumber));
   printSelection();
   displayDirty = true;
 }
